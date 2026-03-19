@@ -5,7 +5,6 @@ const CELL_SIZE = 5; // px
 const GRID_COLOR = "#CCCCCC";
 const DEAD_COLOR = "#FFFFFF";
 const ALIVE_COLOR = "#000000";
-const pre = document.getElementById("game-of-life-canvas");
 // Construct the universe, and get its width and height.
 const universe = Universe.new();
 const width = universe.width();
@@ -21,15 +20,9 @@ const ctx = canvas.getContext('2d');
 
 let animationId = null;
 
-// This function is the same as before, except the
-// result of `requestAnimationFrame` is assigned to
-// `animationId`.
 const renderLoop = () => {
-  drawGrid();
   drawCells();
-
   universe.tick();
-
   animationId = requestAnimationFrame(renderLoop);
 };
 
@@ -103,10 +96,9 @@ const drawCells = () => {
       );
     }
   }
-
-  ctx.stroke();
 };
 
 drawGrid();
-drawCells();
 play();
+
+export { isPaused, play, pause, getIndex };
