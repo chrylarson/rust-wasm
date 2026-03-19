@@ -9,7 +9,7 @@ module.exports = {
   },
   mode: "development",
   plugins: [
-    new CopyWebpackPlugin({ patterns: [{ from: 'index.html' }] })
+    new CopyWebpackPlugin([{ from: 'index.html' }])
   ],
     // Add experiments config for WebAssembly support
   experiments: {
