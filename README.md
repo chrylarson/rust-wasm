@@ -1,3 +1,7 @@
+<p>
+  <a href="https://chrylarson.github.io/rust-wasm/">gh-pages</a>
+</p>
+
 <div align="center">
 
   <h1><code>create-wasm-app</code></h1>
