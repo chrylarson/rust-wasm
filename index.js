@@ -100,3 +100,5 @@ const drawCells = () => {
 
 drawGrid();
 play();
+
+export { isPaused, play, pause, getIndex };
